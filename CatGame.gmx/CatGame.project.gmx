@@ -12,6 +12,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\object0</object>
+    <object>objects\obj_cat</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
