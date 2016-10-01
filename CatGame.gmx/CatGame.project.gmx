@@ -11,6 +11,7 @@
     <sprite>sprites\spr_testing</sprite>
     <sprite>sprites\spr_solid</sprite>
     <sprite>sprites\spr_skillscreen</sprite>
+    <sprite>sprites\spr_skill_health_one</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_title</background>
@@ -28,6 +29,7 @@
     <object>objects\obj_solid</object>
     <object>objects\obj_title_screen</object>
     <object>objects\obj_skillscreen</object>
+    <object>objects\obj_skill_health_one</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_room</room>
