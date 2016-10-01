@@ -7,15 +7,23 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
+    <sprites name="Collision Objects">
+      <sprite>sprites\spr_solid</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_collisions.gml</script>
+    <script>scripts\scr_inputs.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\obj_cat</object>
+    <object>objects\obj_solid</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\r_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
