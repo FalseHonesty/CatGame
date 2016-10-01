@@ -21,9 +21,18 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_title_screen</font>
+<<<<<<< HEAD
   </fonts>
   <objects name="objects">
     <object>objects\obj_cat</object>
+=======
+    <font>fonts\font_title_screen</font>
+    <font>fonts\font_title_screen</font>
+    <font>fonts\font_title_screen</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\object0</object>
+>>>>>>> origin/master
     <object>objects\obj_solid</object>
     <object>objects\obj_title_screen</object>
   </objects>
