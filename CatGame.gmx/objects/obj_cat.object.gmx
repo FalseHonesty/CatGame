@@ -59,11 +59,9 @@ var xpcap = 10+(global.level*10); //creates an xp cap that grows according to le
         <arguments>
           <argument>
             <kind>1</kind>
-<<<<<<< HEAD
 =======
             <string>/// You can edit this, right now I'm putting in XP stuff. If you're doing movement, please put it above the XP stuff.
 
-<<<<<<< HEAD
 if(xp &gt;= xpcap)
     {
     xp = 0;
@@ -96,7 +94,6 @@ spd = 4;
         <arguments>
           <argument>
             <kind>1</kind>
->>>>>>> origin/master
             <string>/// Scripts
 
 //Get inputs from the script
@@ -130,11 +127,11 @@ if (!right) &amp;&amp; (!left) &amp;&amp; (!down) &amp;&amp; (!up)
 
 
 scr_collisions();
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
 
->>>>>>> origin/master
+=======
+
+
+
 </string>
           </argument>
         </arguments>
