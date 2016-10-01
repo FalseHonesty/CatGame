@@ -90,7 +90,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white)
-draw_set_font(font_title_screen)
+draw_set_font(font_title_screen1)
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 draw_text(room_width/2,room_height-48+random_range(-2,2),"Press Anykey to Continue")
