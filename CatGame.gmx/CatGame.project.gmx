@@ -11,6 +11,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\obj_cat</object>
