@@ -35,6 +35,10 @@ vspd = 0;
 // moving speed
 spd = 2;
 
+//Pause Control
+global.paused = false;
+
+open = false; //Variable for skill screen
 </string>
           </argument>
         </arguments>
@@ -58,13 +62,46 @@ spd = 2;
           <argument>
             <kind>1</kind>
             <string>/// Manage the movement code
-
+if(!global.paused){ //Controller for game pauses
 scr_inputs();
 
 
 scr_collisions();
-
-
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(keyboard_check_pressed(ord('I'))){ //Open/Close the skill screen
+open = !open;
+}
+if(open){
+global.paused = true; //Pause the Game
+instance_create(room_width/2-75,30,obj_skillscreen); //Create the skill screen
+}
+else {
+ with(obj_skillscreen){
+  instance_destroy();
+ }
+}
 </string>
           </argument>
         </arguments>
