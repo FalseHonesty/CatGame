@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(room_width/2,room_height/2,obj_skill_health_one);
+            <string>instance_create(x+10,y+50,obj_skill_health_one);
+instance_create(x+10,y+90,obj_skill_health_two);
+instance_create(x+10,y+130,obj_skill_health_three);
+instance_create(x+10,y+180,obj_skill_attack_one);
+instance_create(x+10,y+220,obj_skill_attack_two);
+instance_create(x+10,y+260,obj_skill_attack_three);
 </string>
           </argument>
         </arguments>
@@ -50,6 +55,35 @@
             <kind>1</kind>
             <string>///Remove instances
 with(obj_skill_health_one){instance_destroy();} //Destroy all skill objects
+with(obj_skill_health_two){instance_destroy();}
+with(obj_skill_health_three){instance_destroy();}
+with(obj_skill_attack_one){instance_destroy();}
+with(obj_skill_attack_two){instance_destroy();}
+with(obj_skill_attack_three){instance_destroy();}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(x+250,y+10,global.skillPoints);
 </string>
           </argument>
         </arguments>

@@ -20,8 +20,7 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\spr_skill_health_one_0.png</frame>
-    <frame index="1">images\spr_skill_health_one_1.png</frame>
-    <frame index="2">images\spr_skill_health_one_2.png</frame>
+    <frame index="0">images\spr_skill_attack_three_0.png</frame>
+    <frame index="1">images\spr_skill_attack_three_1.png</frame>
   </frames>
 </sprite>

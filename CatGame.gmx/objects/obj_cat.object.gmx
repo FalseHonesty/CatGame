@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -42,6 +42,8 @@ open = false; //Variable for skill screen
 
 maxHealth = 3;
 curHealth = 3;
+maxStrength = 3;
+curStrength = 3;
 </string>
           </argument>
         </arguments>
@@ -63,8 +65,27 @@ curHealth = 3;
           <argument>
             <kind>1</kind>
             <string>///Init Skills
-global.skillPoints = 1;
-global.health_one = false;
+global.skillPoints = 1; //Init Skill Points
+
+global.health_one = false; //Init checks
+global.health_two = false;
+global.health_three = false;
+global.attack_one = false;
+global.attack_two = false;
+global.attack_three = false;
+global.speed_one = false;
+global.speed_two = false;
+global.speed_three = false;
+
+global.hOneValid = true; //health
+global.aOneValid = true; //attack
+global.sOneValid = true; //speed
+global.hTwoValid = false;
+global.aTwoValid = false;
+global.sTwoValid = false;
+global.hThreeValid = false;
+global.aThreeValid = false;
+global.sThreeValid = false;
 </string>
           </argument>
         </arguments>
@@ -119,8 +140,6 @@ scr_collisions();
             <string>///Skillscreen
 if(keyboard_check_pressed(ord('I'))){ //Open/Close the skill screen
 open = !open;
-} else {
-    draw_text(10,10,curHealth);
 }
 if(open){
 global.paused = true; //Pause the Game
@@ -131,6 +150,7 @@ else {
   instance_destroy(); //Destroy skillscreen if its not open
  }
 }
+draw_text(48,48,curHealth);
 </string>
           </argument>
         </arguments>
