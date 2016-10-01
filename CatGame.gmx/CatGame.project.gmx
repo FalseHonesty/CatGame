@@ -15,42 +15,14 @@
     <background>background\bg_title</background>
   </backgrounds>
   <paths name="paths"/>
-=======
-=======
-
-  <scripts name="scripts"/>
-
-
-  <fonts name="fonts">
-    <font>fonts\font_title_screen</font>
-  </fonts>
-
-
-=======
-
-
   <scripts name="scripts">
     <script>scripts\scr_collisions.gml</script>
     <script>scripts\scr_inputs.gml</script>
   </scripts>
-
-=======
-
-=======
-
-
-=======
-
   <fonts name="fonts">
     <font>fonts\font_title_screen</font>
-    <font>fonts\font_title_screen</font>
   </fonts>
-
-=======
-
-
   <objects name="objects">
-    <object>objects\object0</object>
     <object>objects\obj_cat</object>
     <object>objects\obj_solid</object>
     <object>objects\obj_title_screen</object>

@@ -33,45 +33,10 @@ vspd = 0; //Vertical speed
 spd = 6; //Movement speed (how fast he goes in any given direction)
 
 //XP system-------------------------------------
-var xp = 0; //sets defaukt xp to 0 so when game starts, you have no xp.
+var xp = 0; //sets default xp to 0 so when game starts, you have no xp.
 globalvar level; //created your level
 global.level = 0; //sets default level to 1. makes it so you are level 1 at game start
 var xpcap = 10+(global.level*10); //creates an xp cap that grows according to level. xp cap is used ot know when to level up
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-=======
-            <string>/// You can edit this, right now I'm putting in XP stuff. If you're doing movement, please put it above the XP stuff.
-
-if(xp &gt;= xpcap)
-    {
-    xp = 0;
-    global.level +=1;
-    xpcap = 10+(global.leve*10);
-    }
-=======
-
-//The speed we'll be using to move around
-spd = 4;
 </string>
           </argument>
         </arguments>
@@ -128,8 +93,13 @@ if (!right) &amp;&amp; (!left) &amp;&amp; (!down) &amp;&amp; (!up)
 
 scr_collisions();
 
-=======
-
+//XP checking for levelup and acting accordingly
+if(xp &gt;= xp_cap)
+{
+    xp = 0; //resets XP
+    global.level += 1; //increases level by 1
+    xpcap = 10+(level * 10); //increases XP cap for new level
+}
 
 
 </string>
