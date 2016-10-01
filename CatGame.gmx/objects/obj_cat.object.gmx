@@ -7,7 +7,6 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-<<<<<<< HEAD
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -35,7 +34,7 @@ hspd = 0;
 vspd = 0;
 
 //The speed we'll be using to move around
-spd = 6;
+spd = 4;
 </string>
           </argument>
         </arguments>
@@ -97,9 +96,6 @@ scr_collisions();
       </action>
     </event>
   </events>
-=======
-  <events/>
->>>>>>> origin/master
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
