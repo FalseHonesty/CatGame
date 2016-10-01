@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
+    <sprite>sprites\spr_hero</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
