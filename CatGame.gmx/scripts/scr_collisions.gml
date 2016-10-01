@@ -1,4 +1,4 @@
-// 
+/// Horizontal and vertical collisions
 
 // Horizontal collision checking
 if(place_meeting(x+(hspd), y, obj_solid))
