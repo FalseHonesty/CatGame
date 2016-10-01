@@ -140,6 +140,9 @@ scr_collisions();
             <string>///Skillscreen
 if(keyboard_check_pressed(ord('I'))){ //Open/Close the skill screen
 open = !open;
+if(open){
+audio_play_sound(snd_page_open,1,false);
+}
 }
 if(open){
 global.paused = true; //Pause the Game
