@@ -15,49 +15,17 @@
     <background>background\bg_title</background>
   </backgrounds>
   <paths name="paths"/>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-  <scripts name="scripts"/>
-
-
-  <fonts name="fonts">
-    <font>fonts\font_title_screen</font>
-  </fonts>
-
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
-
->>>>>>> origin/master
->>>>>>> origin/master
   <scripts name="scripts">
     <script>scripts\scr_collisions.gml</script>
     <script>scripts\scr_inputs.gml</script>
   </scripts>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
   <fonts name="fonts">
     <font>fonts\font_title_screen</font>
     <font>fonts\font_title_screen</font>
+    <font>fonts\font_title_screen</font>
   </fonts>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
->>>>>>> origin/master
   <objects name="objects">
     <object>objects\object0</object>
-    <object>objects\obj_cat</object>
     <object>objects\obj_solid</object>
     <object>objects\obj_title_screen</object>
   </objects>
