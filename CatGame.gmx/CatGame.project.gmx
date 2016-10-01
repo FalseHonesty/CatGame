@@ -11,16 +11,10 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-<<<<<<< HEAD
-  <fonts name="fonts">
-    <font>fonts\font_title_screen</font>
-  </fonts>
-=======
   <scripts name="scripts">
     <script>scripts\scr_collisions.gml</script>
     <script>scripts\scr_inputs.gml</script>
   </scripts>
->>>>>>> origin/master
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\obj_cat</object>
