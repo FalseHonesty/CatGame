@@ -8,16 +8,31 @@
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
     <sprite>sprites\spr_hero</sprite>
+    <sprite>sprites\spr_solid</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+<<<<<<< HEAD
   <scripts name="scripts"/>
+=======
+
+  <fonts name="fonts">
+    <font>fonts\font_title_screen</font>
+  </fonts>
+
+  <scripts name="scripts">
+    <script>scripts\scr_collisions.gml</script>
+    <script>scripts\scr_inputs.gml</script>
+  </scripts>
+
+>>>>>>> origin/master
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\obj_cat</object>
+    <object>objects\obj_solid</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\r_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
