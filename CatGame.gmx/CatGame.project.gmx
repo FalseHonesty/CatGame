@@ -9,6 +9,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
+    <sprite>sprites\spr_npctemplate</sprite>
     <sprite>sprites\spr_solid</sprite>
     <sprite>sprites\spr_skillscreen</sprite>
     <sprite>sprites\spr_skill_health_one</sprite>
@@ -30,6 +31,7 @@
     <object>objects\obj_title_screen</object>
     <object>objects\obj_skillscreen</object>
     <object>objects\obj_skill_health_one</object>
+    <object>objects\obj_npctemplate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_room</room>
