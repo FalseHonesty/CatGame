@@ -4,19 +4,31 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\m_title_screen</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
+    <sprite>sprites\spr_hero</sprite>
     <sprite>sprites\spr_solid</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_title</background>
+  </backgrounds>
   <paths name="paths"/>
 <<<<<<< HEAD
 =======
 
+  <scripts name="scripts"/>
+
+
   <fonts name="fonts">
     <font>fonts\font_title_screen</font>
   </fonts>
+
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 
 >>>>>>> origin/master
   <scripts name="scripts">
@@ -26,13 +38,22 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+  <fonts name="fonts">
+    <font>fonts\font_title_screen</font>
+  </fonts>
+
 >>>>>>> origin/master
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\obj_cat</object>
     <object>objects\obj_solid</object>
+    <object>objects\obj_title_screen</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\title_room</room>
     <room>rooms\r_test</room>
   </rooms>
   <help>
