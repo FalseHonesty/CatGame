@@ -73,6 +73,7 @@ if(xp &gt;= xpcap)
     xpcap = 10+(global.leve*10);
     }
 =======
+
 //The speed we'll be using to move around
 spd = 4;
 </string>
@@ -131,6 +132,7 @@ if (!right) &amp;&amp; (!left) &amp;&amp; (!down) &amp;&amp; (!up)
 
 scr_collisions();
 >>>>>>> origin/master
+
 </string>
           </argument>
         </arguments>
