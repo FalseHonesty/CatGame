@@ -4,14 +4,18 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\m_title_screen</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
     <sprites name="Collision Objects">
       <sprite>sprites\spr_solid</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_title</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_collisions.gml</script>
@@ -20,10 +24,18 @@
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\obj_cat</object>
+<<<<<<< HEAD
     <object>objects\obj_solid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_test</room>
+=======
+    <object>objects\obj_title_screen</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\title_room</room>
+    <room>rooms\room0</room>
+>>>>>>> origin/master
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
