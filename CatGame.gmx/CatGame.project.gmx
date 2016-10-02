@@ -6,18 +6,12 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\m_title_screen</sound>
-    <sound>sound\snd_page_open</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_testing</sprite>
     <sprite>sprites\spr_solid</sprite>
     <sprite>sprites\spr_skillscreen</sprite>
     <sprite>sprites\spr_skill_health_one</sprite>
-    <sprite>sprites\spr_skill_health_two</sprite>
-    <sprite>sprites\spr_skill_health_three</sprite>
-    <sprite>sprites\spr_skill_attack_one</sprite>
-    <sprite>sprites\spr_skill_attack_two</sprite>
-    <sprite>sprites\spr_skill_attack_three</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_title</background>
@@ -36,11 +30,6 @@
     <object>objects\obj_title_screen</object>
     <object>objects\obj_skillscreen</object>
     <object>objects\obj_skill_health_one</object>
-    <object>objects\obj_skill_health_two</object>
-    <object>objects\obj_skill_health_three</object>
-    <object>objects\obj_skill_attack_one</object>
-    <object>objects\obj_skill_attack_two</object>
-    <object>objects\obj_skill_attack_three</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_room</room>

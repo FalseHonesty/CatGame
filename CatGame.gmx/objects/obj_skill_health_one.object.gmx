@@ -29,33 +29,6 @@
 image_index = 0;
 if(global.health_one = true){
     image_index = 1;
-} if(!global.hOneValid){
-    image_index = 2;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(!global.hOneValid){
-    image_index = 2;
 }
 </string>
           </argument>
@@ -79,7 +52,7 @@ if(global.health_one = true){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!global.health_one and global.skillPoints &gt;= 1 and global.hOneValid){ //Checks if the skill isn't already obtained and if we have enough skill points
+            <string>if(!global.health_one and global.skillPoints &gt;= 1){ //Checks if the skill isn't already obtained and if we have enough skill points
     global.health_one = true;
     image_index = 1;
     obj_cat.maxHealth += 2;

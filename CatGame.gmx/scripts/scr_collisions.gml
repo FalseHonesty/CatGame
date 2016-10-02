@@ -1,5 +1,11 @@
 /// Horizontal and vertical collisions
 
+
+move_hor = left + right;
+move_vert = up + down;
+hsp = move_hor * spd;
+vsp = move_vert * spd
+
 // Horizontal collision checking
 if(place_meeting(x+(hspd), y, obj_solid))
 {
