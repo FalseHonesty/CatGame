@@ -1,8 +1,7 @@
 /// Directional movement script
 
-right = keyboard_check(ord('D'));
-left = keyboard_check(ord('A')); 
-down = keyboard_check(ord('S'));
-up = keyboard_check(ord('W'));
+move_x = keyboard_check(ord('D'))-keyboard_check(ord('A')); 
+move_y = keyboard_check(ord('S'))-keyboard_check(ord('W'));
+
 
 

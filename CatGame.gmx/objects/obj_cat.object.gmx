@@ -61,41 +61,9 @@ spd = 2;
 
 scr_inputs();
 
+hspd = move_x*spd;
 
-if(right - left)
-{
-    hspd = (spd);
-}
-
-if(left-right)
-{
-    hspd = -spd;
-}
-
-
-
-if(up)
-{
-    vspd = -spd;
-}
-
-if(down)
-{
-    vspd = spd;
-
-}
-
-
-
-
-// If nothing is being pressed, then stop the player from moving
-if (!left) &amp;&amp; (!down) &amp;&amp; (!right) &amp;&amp; (!up)
-{
-    hspd = 0;
-    vspd = 0;
-
-}
-
+vspd = move_y*spd;
 scr_collisions();
 
 
