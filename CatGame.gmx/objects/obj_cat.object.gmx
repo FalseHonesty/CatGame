@@ -126,6 +126,7 @@ if(xp &gt; xpcap)
 {
     global.level += 1;
     xp = 0;
+    global.skillPoints += 1;
     xpcap = 10 +(global.level * 10);
 }
 </string>
