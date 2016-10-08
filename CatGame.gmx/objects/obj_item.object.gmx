@@ -26,17 +26,32 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0
-if (image_index = 0) x = obj_cat.x+2
-if (image_index = 1) x = obj_cat.x-20
-y = obj_cat.y
-if (time != -1) {
-    time -= 1
-    image_angle -= 0.2
+//if cat is alive
+    if (instance_exists(obj_cat)) {
+    //sword change direction
+    if (keyboard_check_pressed(ord('A'))) {
+        image_index = 1
+    }
+    if (keyboard_check_pressed(ord('D'))) {
+        image_index = 0
+    }
+    //sword change position
+    if (image_index = 0) x = obj_cat.x+2
+    if (image_index = 1) x = obj_cat.x-20
+    y = obj_cat.y
+    //when attacking
+    if (time != -1) {
+        time -= 1
+        //rotate sword
+        image_angle -= 0.2
+    }
+    //when done attacking
+    if (time == -1) {
+        image_angle = 0
+    }
+    //remove cooldown
+    if (time == 0) global.attack = 0
 }
-if (time == -1) {
-    image_angle = 0
-}
-if (time == 0) global.attack = 0
 </string>
           </argument>
         </arguments>
@@ -83,8 +98,10 @@ global.attack = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.attack == 0) {
-image_angle = 12
+            <string>///Initiate attack
+//check if it's in cooldown
+if (global.attack == 0) {
+    image_angle = 12
     time = 60
     global.attack = 1
 }

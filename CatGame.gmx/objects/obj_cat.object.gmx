@@ -39,9 +39,15 @@ spd = 2;
 global.paused = false;
 
 open = false; //Variable for skill screen
-
+time = -1
 maxHealth = 3;
 curHealth = 3;
+image_speed = 0
+image_index = 0
+healthTimer = 300
+fade = 0
+global.drawDead = 0
+global.respawnTimer = 0
 </string>
           </argument>
         </arguments>
@@ -90,111 +96,84 @@ ds_list_add(global.skillList,0)
             <kind>1</kind>
             <string>/// Manage the movement code
 if(!global.paused){ //Controller for game pauses
-scr_inputs();
 
-scr_collisions();
+    scr_inputs();
+    
+    hspd = move_x*spd;
+    
+    vspd = move_y*spd;
+    scr_collisions();
+    //if attacked by enemy and not in countdown
+    if (global.enemyattack == 1 &amp;&amp; time == -1) {
+        //knockback
+        spd = -0.4
+        //turn red
+        image_index = 1
+        //take damage
+        curHealth -= 0.75
+        //countdown
+        time = 40
+    }
+    //countdown
+    if (time != -1) time -= 1
+    if (time == 20) {
+        //normal speed
+        spd = 2
+    }
+    //if countdown finish
+    if (time == -1) {
+        //cooldown finish
+        global.enemyattack = 0
+        //normal sprite
+        image_index = 0
+    }
+    //health regen
+    if (healthTimer != 0) {
+        healthTimer -= 1
+    }
+    //add health, reset timer
+    if (healthTimer == 0) {
+        //check if it's higher than max health
+        if !(curHealth &gt;= maxHealth) curHealth += 0.5
+        healthTimer = 500
+    }
+    //if no health, fade out
+    if (curHealth &lt;= 0) {fade = 20}
+    if (fade != 0) {
+        fade -= 1
+        image_alpha -= 0.05
+    }
+    //destroy instance if completely transparent
+    if (image_alpha &lt;= 0) {
+        global.drawDead = 1
+        instance_destroy()
+    }
+}
+//respawn timer
+if (global.respawnTimer != 0) {
+    global.respawnTimer -= 1
 }
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="5" enumb="87">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>112</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_wrap</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>
-    y -= 4
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="83">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>  y += 4
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>obj_item.image_index = 0
-    x += 4
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="65">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>obj_item.image_index = 1
-
-    x -= 4
-
-</string>
+            <kind>4</kind>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -216,11 +195,13 @@ scr_collisions();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Skillscreen
+            <string>//tbh it's easier to read
+draw_set_font(font_normal)
+///Skillscreen
 if(keyboard_check_pressed(ord('I'))){ //Open/Close the skill screen
 open = !open;
 } else {
-    draw_text(10,20,curHealth);
+    draw_text(30,30,curHealth);
 }
 if(open){
 global.paused = true; //Pause the Game
@@ -234,6 +215,63 @@ else {
 //draw event preceeds other game events, smh
 healthSkill = ds_list_find_value(global.skillList,0)
 draw_text(960,32,healthSkill);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Dead code
+if (global.drawDead == 1) {
+    draw_set_colour(c_red)
+    draw_text(room_width/2,room_height/2,"You died! gg!")
+    draw_text(room_width/2,(room_height/2) + 28,"Press any key to respawn")
+    global.respawnTimer = 60
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Respawn code
+if (global.drawDead == 1 &amp;&amp; global.respawnTimer == 0) {
+    do {
+        randomx = random_range(0,room_width)
+        randomy = random_range(0,room_height)
+    } until (!place_meeting(randomx,randomy,obj_solid))
+    instance_create(randomx,randomy,obj_cat)
+}
 </string>
           </argument>
         </arguments>

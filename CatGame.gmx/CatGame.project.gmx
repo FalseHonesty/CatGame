@@ -30,6 +30,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_title_screen</font>
+    <font>fonts\font_normal</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_cat</object>
